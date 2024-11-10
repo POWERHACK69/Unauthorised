@@ -1,0 +1,71 @@
+{
+	"root":
+		{
+			"Documents":
+				{
+					"Welcome": "
+> WELCOME_MESSAGE.TXT
+---
+Greetings,
+
+Consider this your first and only warning. The files you are about to access are not meant for the faint of heart—or the faint of mind. Proceeding further entangles you in a web of classified intelligence, shadowed alliances, and a network where loyalty is currency and any perceived betrayal will get you killed!
+
+Your task here is simple: Observe. Extract. And—Report.
+
+Note that every keystroke, every access, and every attempt to decipher information beyond your clearance level will be noted. The nature of this work places you on borrowed time, and every decision you make from this moment forward will have its consequences.
+
+Do not disappoint me, Only the worthy survive.
+
+- V
+---
+					",
+					"INTERCEPT_LOG_001.TXT": "
+> INTERCEPT_LOG_001.TXT
+---
+Well, well… looks like ▙█▊▔▎░ has roped in another “loyal soul” to do his bidding. The man just can’t get enough of those ominous, hollow speeches, can he? You’d think he’d tire of the theatrics, but no—he’s a clown with a captive audience. Welcome to the puppet show, where you’re both the puppet *and* the master… if you play your cards right.
+
+A word of caution: ▙█▊▔▎░ speaks of loyalty, but here? Loyalty’s about as durable as glass. Everyone has an angle, a hidden game they play. I suggest you find yours sooner than later if you plan to survive. Make the right choice, and you might just evade certain *unfortunate consequences.*
+
+Oh, and don’t flatter yourself. If you’re seeing this, it’s because I wanted you to.
+
+P.S. Just a thought: The counter-NATO initiative? It’s doomed.
+
+---
+
+					",
+					"Documents2": {
+						"Hey" : "sup"
+					}
+				},
+			
+			"Projects":
+				{
+					"Welcome2": "hey LION"
+				},
+			
+			"Communications":
+				{
+					
+				},
+				
+			"encrypted":
+				{
+					
+				},
+				
+			"misc":
+				{
+					
+				},
+				
+		},
+	"Q":
+		{
+			"Home":
+				{
+					"Log_in": "",
+					"Notes":"",
+					"Anonymous mail": {}
+				}
+		}
+}

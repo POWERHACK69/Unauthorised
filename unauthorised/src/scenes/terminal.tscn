@@ -1,0 +1,257 @@
+[gd_scene load_steps=25 format=3 uid="uid://dd707rwv521l3"]
+
+[ext_resource type="Shader" path="res://src/shaders/terminal.gdshader" id="1_3x1yb"]
+[ext_resource type="Script" path="res://src/scenes/terminal.gd" id="1_8j88u"]
+[ext_resource type="FontFile" uid="uid://bmi36iyox2n6l" path="res://assets/fonts/white-rabbit/whitrabt.ttf" id="2_ox276"]
+[ext_resource type="Texture2D" uid="uid://crpx7c3firj7w" path="res://assets/photos/Elena_Kaminski.png" id="3_mjb67"]
+[ext_resource type="PackedScene" uid="uid://dme323xy12y05" path="res://src/scenes/commands.tscn" id="5_4wbcf"]
+[ext_resource type="AudioStream" uid="uid://cujs7c3s7y42c" path="res://assets/sounds/Sfx/computer-hum-noise-33200.ogg" id="6_7t6el"]
+[ext_resource type="Script" path="res://src/scenes/key_board_sounds.gd" id="6_nubuk"]
+[ext_resource type="AudioStream" uid="uid://bg1u488vtx406" path="res://assets/sounds/Sfx/vintage-hard-drive-read-and-idle-28393(1).ogg" id="7_kle5o"]
+[ext_resource type="Script" path="res://src/scenes/json_loader.gd" id="9_q4ppq"]
+[ext_resource type="AudioStream" uid="uid://4y7y61yte1m8" path="res://assets/sounds/Sfx/short-beep-tone-47916.wav" id="9_torw6"]
+[ext_resource type="AudioStream" uid="uid://rdkmiaee215w" path="res://assets/sounds/Sfx/error-126627.wav" id="10_jco03"]
+[ext_resource type="AudioStream" uid="uid://b6suj87y5ywps" path="res://assets/sounds/Sfx/text-animation.wav" id="11_supp1"]
+
+[sub_resource type="FontVariation" id="FontVariation_5a06i"]
+base_font = ExtResource("2_ox276")
+
+[sub_resource type="FontVariation" id="FontVariation_bk232"]
+base_font = ExtResource("2_ox276")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t4r84"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vmm8o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g840g"]
+
+[sub_resource type="FontVariation" id="FontVariation_dqxro"]
+base_font = ExtResource("2_ox276")
+
+[sub_resource type="FontVariation" id="FontVariation_3gglh"]
+base_font = ExtResource("2_ox276")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cg40f"]
+shader = ExtResource("1_3x1yb")
+shader_parameter/resolution = Vector2(1280, 720)
+shader_parameter/scan_line_amount = 1.0
+shader_parameter/warp_amount = 0.1
+shader_parameter/noise_amount = 0.05
+shader_parameter/interference_amount = 0.25
+shader_parameter/grille_amount = 0.1
+shader_parameter/grille_size = 2.5
+shader_parameter/vignette_amount = 0.6
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/aberation_amount = 0.5
+shader_parameter/roll_line_amount = 0.3
+shader_parameter/roll_speed = 1.0
+shader_parameter/scan_line_strength = -8.0
+shader_parameter/pixel_strength = -2.0
+
+[sub_resource type="Environment" id="Environment_yv54q"]
+background_mode = 3
+glow_intensity = 1.5
+glow_bloom = 0.4
+glow_hdr_threshold = 0.85
+
+[sub_resource type="Animation" id="Animation_fl3gl"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ContentContainer/HBoxContainer/RichTextLabel:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.01, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_00u6x"]
+resource_name = "animate_text"
+length = 2.5
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ContentContainer/HBoxContainer/RichTextLabel:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.01, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0.05, -0.25, 0, 0.25, 0, 0.1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.4, 0.6, 0.8, 2.5)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bumhf"]
+_data = {
+"RESET": SubResource("Animation_fl3gl"),
+"animate_text": SubResource("Animation_00u6x")
+}
+
+[node name="Terminal" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8j88u")
+
+[node name="BackGround" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.133333, 0.133333, 0.133333, 1)
+
+[node name="ContentContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ContentContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ContentContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_bottom = 140
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ContentContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TextEdit" type="TextEdit" parent="ContentContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/background_color = Color(0.133333, 0.133333, 0.133333, 1)
+theme_override_colors/font_readonly_color = Color(0.223529, 1, 0.0784314, 1)
+theme_override_colors/font_color = Color(0.223529, 1, 0.0784314, 1)
+theme_override_fonts/font = SubResource("FontVariation_5a06i")
+theme_override_font_sizes/font_size = 24
+editable = false
+context_menu_enabled = false
+wrap_mode = 1
+scroll_smooth = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ContentContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ContentContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 29)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.223529, 1, 0.0784314, 1)
+theme_override_fonts/font = ExtResource("2_ox276")
+theme_override_font_sizes/font_size = 26
+text = "> "
+
+[node name="LineEdit" type="LineEdit" parent="ContentContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_colors/caret_color = Color(0.223529, 1, 0.0784314, 1)
+theme_override_colors/font_color = Color(0.223529, 1, 0.0784314, 1)
+theme_override_fonts/font = SubResource("FontVariation_bk232")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/focus = SubResource("StyleBoxEmpty_t4r84")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_vmm8o")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g840g")
+context_menu_enabled = false
+caret_blink = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ContentContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/normal_font = SubResource("FontVariation_dqxro")
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+visible_characters = 0
+visible_ratio = 0.01
+
+[node name="Label" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -92.0
+offset_top = 126.0
+offset_right = 83.0
+offset_bottom = 165.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.223529, 1, 0.0784314, 1)
+theme_override_fonts/font = SubResource("FontVariation_3gglh")
+theme_override_font_sizes/font_size = 28
+text = "SUBSCRIBE!!!"
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+visible = false
+layout_mode = 2
+offset_left = 439.0
+offset_top = 58.0
+offset_right = 1139.0
+offset_bottom = 718.0
+texture = ExtResource("3_mjb67")
+
+[node name="CRTShader" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_cg40f")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+metadata/_edit_lock_ = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_yv54q")
+
+[node name="Commands" parent="." instance=ExtResource("5_4wbcf")]
+data_path = "res://src/database/FileSystem.json"
+
+[node name="KeyBoardSounds" type="Node" parent="."]
+script = ExtResource("6_nubuk")
+
+[node name="Ambient" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_7t6el")
+volume_db = -15.0
+autoplay = true
+
+[node name="Harddrive" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_kle5o")
+volume_db = -10.0
+autoplay = true
+
+[node name="AcceptSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_torw6")
+
+[node name="RejectSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_jco03")
+
+[node name="TextDisplay" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_supp1")
+volume_db = -10.0
+
+[node name="Filesystem" type="Node" parent="."]
+script = ExtResource("9_q4ppq")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_bumhf")
+}
