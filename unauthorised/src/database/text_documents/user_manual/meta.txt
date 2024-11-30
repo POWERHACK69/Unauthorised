@@ -1,0 +1,22 @@
+> Introduction to the Meta Command
+---
+Welcome, Operative.
+
+The META command is your essential tool for uncovering hidden details within XCORE. It provides instant access to vital metadata, ensuring clarity and precision in your operations.
+
+Key Functions:
+- Instant Insight: Retrieve file names, types, creation dates, and modification histories.
+
+- Rapid Identification: Quickly understand the nature of files before diving deeper.
+
+- Streamlined Operations: Minimize guesswork and focus on mission-critical tasks.
+
+Usage Guidelines:
+- Type meta followed by the file name to access its metadata.
+- Treat metadata with the utmost discretion; it reveals the digital landscape.
+- Cross-reference meta results with operational protocols for optimal efficiency.
+
+The META command is your ally. Use it wisely, Operative.
+
+- X
+---

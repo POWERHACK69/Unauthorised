@@ -1,0 +1,23 @@
+> Introduction to the XCORE system
+---
+Welcome, Operative.
+
+XCORE is the proprietary operating system of the_order, designed for the most clandestine missions. It combines advanced encryption and robust security protocols to protect our most sensitive data.
+
+Key Features:
+- Advanced Encryption: Multi-layered security algorithms.
+-  User Authentication: Multi-factor authentication.
+- Customizable Interfaces: Role-based access control and user profiles.
+-  Case Sensitive: Unlike most computers, XCORE is case-sensitive for extra security.
+
+Operational Guidelines:
+- Log out when not in use.
+- Never share your passcodes.
+- Encrypt sensitive data and use secure channels.
+- Keep XCORE updated with the latest security patches.
+- Follow emergency protocols in case of a breach.
+
+XCORE is the backbone of our operations. Master it, and you will be instrumental in achieving our goals.
+
+- X
+---

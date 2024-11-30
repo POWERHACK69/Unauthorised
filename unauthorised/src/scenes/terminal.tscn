@@ -1,14 +1,12 @@
-[gd_scene load_steps=25 format=3 uid="uid://dd707rwv521l3"]
+[gd_scene load_steps=23 format=3 uid="uid://dd707rwv521l3"]
 
 [ext_resource type="Shader" path="res://src/shaders/terminal.gdshader" id="1_3x1yb"]
 [ext_resource type="Script" path="res://src/scenes/terminal.gd" id="1_8j88u"]
 [ext_resource type="FontFile" uid="uid://bmi36iyox2n6l" path="res://assets/fonts/white-rabbit/whitrabt.ttf" id="2_ox276"]
-[ext_resource type="Texture2D" uid="uid://crpx7c3firj7w" path="res://assets/photos/Elena_Kaminski.png" id="3_mjb67"]
 [ext_resource type="PackedScene" uid="uid://dme323xy12y05" path="res://src/scenes/commands.tscn" id="5_4wbcf"]
 [ext_resource type="AudioStream" uid="uid://cujs7c3s7y42c" path="res://assets/sounds/Sfx/computer-hum-noise-33200.ogg" id="6_7t6el"]
 [ext_resource type="Script" path="res://src/scenes/key_board_sounds.gd" id="6_nubuk"]
 [ext_resource type="AudioStream" uid="uid://bg1u488vtx406" path="res://assets/sounds/Sfx/vintage-hard-drive-read-and-idle-28393(1).ogg" id="7_kle5o"]
-[ext_resource type="Script" path="res://src/scenes/json_loader.gd" id="9_q4ppq"]
 [ext_resource type="AudioStream" uid="uid://4y7y61yte1m8" path="res://assets/sounds/Sfx/short-beep-tone-47916.wav" id="9_torw6"]
 [ext_resource type="AudioStream" uid="uid://rdkmiaee215w" path="res://assets/sounds/Sfx/error-126627.wav" id="10_jco03"]
 [ext_resource type="AudioStream" uid="uid://b6suj87y5ywps" path="res://assets/sounds/Sfx/text-animation.wav" id="11_supp1"]
@@ -34,7 +32,7 @@ base_font = ExtResource("2_ox276")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_cg40f"]
 shader = ExtResource("1_3x1yb")
 shader_parameter/resolution = Vector2(1280, 720)
-shader_parameter/scan_line_amount = 1.0
+shader_parameter/scan_line_amount = 0.0
 shader_parameter/warp_amount = 0.1
 shader_parameter/noise_amount = 0.05
 shader_parameter/interference_amount = 0.25
@@ -64,7 +62,7 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0.01, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(0.04, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 
@@ -139,10 +137,24 @@ theme_override_colors/font_readonly_color = Color(0.223529, 1, 0.0784314, 1)
 theme_override_colors/font_color = Color(0.223529, 1, 0.0784314, 1)
 theme_override_fonts/font = SubResource("FontVariation_5a06i")
 theme_override_font_sizes/font_size = 24
+text = "############################################
+#                                          #
+#     WELCOME, USER 3469, TO THE XCORE     #
+#                                          #
+############################################
+
+Status: **READ ONLY MODE**  
+Review the Manual before contacting X.  
+Careless mistakes will not be forgiven.  
+
+Type `_help` for advanced commands.  
+Type `help` to view basic commands.  
+
+XCORE AWAITS YOUR INPUT.  
+"
 editable = false
 context_menu_enabled = false
 wrap_mode = 1
-scroll_smooth = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ContentContainer/HBoxContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -177,7 +189,7 @@ theme_override_fonts/normal_font = SubResource("FontVariation_dqxro")
 theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 visible_characters = 0
-visible_ratio = 0.01
+visible_ratio = 0.04
 
 [node name="Label" type="Label" parent="."]
 visible = false
@@ -197,15 +209,6 @@ theme_override_colors/font_color = Color(0.223529, 1, 0.0784314, 1)
 theme_override_fonts/font = SubResource("FontVariation_3gglh")
 theme_override_font_sizes/font_size = 28
 text = "SUBSCRIBE!!!"
-
-[node name="TextureRect2" type="TextureRect" parent="."]
-visible = false
-layout_mode = 2
-offset_left = 439.0
-offset_top = 58.0
-offset_right = 1139.0
-offset_bottom = 718.0
-texture = ExtResource("3_mjb67")
 
 [node name="CRTShader" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_cg40f")
@@ -248,10 +251,10 @@ stream = ExtResource("10_jco03")
 stream = ExtResource("11_supp1")
 volume_db = -10.0
 
-[node name="Filesystem" type="Node" parent="."]
-script = ExtResource("9_q4ppq")
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+deterministic = true
 libraries = {
 "": SubResource("AnimationLibrary_bumhf")
 }
+
+[connection signal="meta_clicked" from="ContentContainer/HBoxContainer/RichTextLabel" to="." method="_on_rich_text_label_meta_clicked"]

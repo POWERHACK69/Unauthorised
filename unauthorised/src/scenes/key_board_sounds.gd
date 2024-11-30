@@ -15,7 +15,7 @@ func _input(event):
 			## Play the general sound for any other key
 			play_sound(general_sound)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("Space_Enter"):
 		play_sound(special_sound)
 

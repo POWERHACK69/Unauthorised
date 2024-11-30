@@ -1,0 +1,25 @@
+> Introduction to the Note Command
+---
+Hello, Operative.
+
+Due to popular demand, the note command has been added to improve workflow.
+The 'note' command temporarily stores a string (up to 128 characters) in memory for quick access.
+
+Syntax:
+	
+note <text> #Store a note
+note #View the currently stored note
+
+Limitations:
+
+- The note is temporary and won't persist after a session ends.
+- Maximum length: 128 characters.
+- Storing a new note overwrites the previous one.
+
+Possible Use Cases:
+
+- Quick reminders for tasks or info during a session.
+- Session notes for troubleshooting or monitoring.
+
+- X
+---

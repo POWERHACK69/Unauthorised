@@ -1,0 +1,25 @@
+> Encryptions in the XCORE System
+---
+Greetings, Operative.
+
+The XCORE employs sophisticated encryption techniques to secure sensitive data, ensuring that only the most skilled individuals can decipher its secrets. 
+
+Here’s an overview of the key encryption methods:
+
+- Caesar Cipher: A substitution cipher shifting letters by a fixed number of positions.
+
+- Transposition Cipher: This method rearranges the letters of a message based on a specific system or key, preserving the original characters but disguising the data’s structure.
+
+- Vigenère Cipher: A polyalphabetic substitution cipher that uses a keyword to encode messages.
+
+Guidelines for Use:
+- Select the appropriate cipher based on mission sensitivity.
+
+- Regularly rotate keys and keywords to maintain security.
+
+- Never disclose encryption methods or keys to unauthorized personnel.
+
+Master these encryptions as soon as possible.
+
+- X
+---

@@ -1,0 +1,31 @@
+> XCORE Command Manual
+---
+This guide provides a comprehensive list of commands available in the XCORE operating system. Familiarize yourself with these commands to navigate and interact with the system effectively.
+
+|---BASIC COMMANDS---|
+ Command    | Usage
+------------|-----------------------|
+ _help      | Shows advanced commands
+ list       | Lists files in directory
+ lost       | Shows current directory
+ open X     | Opens 'X'
+ note       | Opens private note
+ back       | Goes to parent directory
+ clear      | Clears terminal
+ shutdown   | Powers off system
+|-------------------------------|
+|---ADVANCED COMMANDS---|
+ Command     | Usage
+-------------|----------------------------|
+ help        | Shows basic commands
+ open X Y    | Opens 'X' with password 'Y'
+ meta X      | Shows metadata for 'X'
+ note X      | Saves 'X' in private note
+ find X      | Locates 'X' in filesystem
+ access X    | Opens secret file 'X'
+ #WTF???     | ???
+|------------------------------------|
+For more detailed information and advanced usage, refer to the XCORE User Guide.
+
+- X
+---

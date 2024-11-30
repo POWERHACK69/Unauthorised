@@ -1,0 +1,20 @@
+> The access Command
+---
+The access command is a critical security feature of the system. It is the only way to access files in the secret directory. To open a file, you must know the exact name it was saved under, ensuring that unauthorized users cannot casually browse sensitive data.
+
+By requiring specific knowledge of file names, the access command minimizes the risk of accidental or unauthorized discovery of files within the XCORE.
+
+Syntax:
+	
+access <filename> #Opens up secret file
+
+Keypoints:
+
+- No file browsing: There is no way to browse or list files in the secret directory; knowledge of the file name is the only way to access data.
+
+- Protects sensitive files: Prevents unauthorized access, ensuring that only those with specific knowledge can retrieve files or delete them.
+
+- The more randomised the file name, the more buried it is
+
+- X
+---

@@ -15,94 +15,146 @@ var text_input
 
 
 # Called when the node enters the scene tree for the first time.
+
 func _ready() -> void:
 	terminal_text.get_v_scroll_bar().self_modulate = Color("white", 0.0)
+	line_edit.grab_focus()  # focus at start, no need for deferred call every frame
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	line_edit.grab_focus.call_deferred()
+func _process(_delta: float) -> void:
 	terminal_text.scroll_vertical = terminal_text.get_line_count()
-	
-	#if Input.is_action_just_pressed("numbers"):
-		#key_click.play()
-	#if Input.is_action_just_pressed("Space_Enter"):
-		#key_click.play()
-	
+	line_edit.grab_focus()  # focus at start, no need for deferred call every frame
 	if Input.is_action_just_pressed("Enter") and line_edit.text != "":
-		#terminal_text.text += "\n"+"> "+line_edit.text
 		text_input = line_edit.text
 		prompt = text_input.split(" ")
 		line_edit.text = ""
 		user_command()
+	if Input.is_action_just_pressed("prev_command") and line_edit.text == "":
+		line_edit.text = text_input
+
+func play_sound(is_accepted: bool) -> void:
+	if is_accepted:
+		accept_sound.play()
+	else:
+		reject_sound.play()
+
+func require_argument(command_name: String) -> void:
+	terminal_text.text += "\n> Command '"+command_name+"' requires at least one argument\n> Type 'help' to see a list of commands"
+	play_sound(false)
 
 func user_command():
-	if prompt[0] == "help" and prompt.size()==1:
-		commands.help()
-		accept_sound.play()
-	elif prompt[0] == "open":
-		if prompt.size()==1:
-			terminal_text.text += "> Command requires atleast one argument\n> Type 'help' to see a list of commands"
-			reject_sound.play()
-		elif prompt.size()==2:
-			commands.open(prompt[1], "")
-			accept_sound.play()
-		elif prompt.size()==3:
-			commands.open(prompt[1], prompt[2])
-			accept_sound.play()
-		else:
+	match prompt[0]:
+		"help", "man":
+			if prompt.size() == 1:
+				commands.help()
+			else:
+				invalid_command()
+		"_help", "_man":
+			if prompt.size() == 1:
+				commands._help()
+			else:
+				invalid_command()
+		"open", "xdg-open", "cd":
+			if prompt.size() == 1:
+				require_argument("open")
+			elif prompt.size() == 2:
+				commands.open(prompt[1])
+			elif prompt.size() == 3:
+				commands.open(prompt[1], prompt[2])
+			else:
+				invalid_command()
+		"find":
+			if prompt.size() == 1:
+				require_argument("find")
+			elif prompt.size() == 2:
+				commands.finder(prompt[1])
+			else:
+				invalid_command()
+		"access", "cat":
+			if prompt.size() == 1:
+				require_argument("access")
+			elif prompt.size() == 2:
+				commands.access(prompt[1])
+			else:
+				invalid_command()
+		"meta":
+			if prompt.size() == 1:
+				require_argument("meta")
+			elif prompt.size() == 2:
+				commands.meta(prompt[1])
+			else:
+				invalid_command()
+		"list", "ls":
+			if prompt.size() == 1:
+				commands.list()
+			else:
+				invalid_command()
+		"back", "cd..":
+			if prompt.size() == 1:
+				commands.back()
+			else:
+				invalid_command()
+		"note":
+			if prompt.size() == 1:
+				commands.notes()
+			else:
+				commands.note = text_input.replace("note ", "").substr(0, 128)
+				commands.note_saved()
+		"lost", "pwd":
+			if prompt.size() == 1:
+				commands.lost()
+			else:
+				invalid_command()
+		"cls", "clear":
+			if prompt.size() == 1:
+				commands.cls()
+			else:
+				invalid_command()
+		"shutdown", "quit":
+			if prompt.size() == 1:
+				play_sound(true)
+				accept_sound.connect("finished", Callable(get_tree(), "quit"))
+			else:
+				invalid_command()
+		"echo", "@echo":
+			play_sound(true)
+			if prompt.size() == 1:
+				terminal_text.text += "\n> ''"
+			else:
+				var echoed = text_input.replace(prompt[0] + " ", "")
+				terminal_text.text += "\n> '" + echoed + "'"
+		"CRT":
+			if prompt.size()== 1:
+				play_sound(true)
+				$CRTShader.visible = !$CRTShader.visible
+		"#WTF???":
+			if prompt.size() == 1:
+				play_sound(true)
+				OS.shell_open("https://www.youtube.com/@-RedIndieGames")
+			else:
+				invalid_command()
+		"rickroll", "rick":
+			if prompt.size() == 1:
+				play_sound(true)
+				OS.shell_open("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+			else:
+				invalid_command()
+		_:
 			invalid_command()
-	elif prompt[0] == "list":
-		if prompt.size()==1:
-			commands.list()
-			accept_sound.play()
-		else:
-			invalid_command()
-	elif prompt[0] == "back":
-		if prompt.size()==1:
-			commands.back()
-			accept_sound.play()
-		else:
-			invalid_command()
-	elif prompt[0] == "lost":
-		if prompt.size()==1:
-			commands.lost()
-			accept_sound.play()
-		else:
-			invalid_command()
-	elif prompt[0] == "cls" or prompt[0] == "clear":
-		if prompt.size()==1:
-			commands.cls()
-			accept_sound.play()
-		else:
-			invalid_command()
-	elif prompt[0] == "shutdown" or prompt[0] == "quit":
-		if prompt.size()==1:
-			accept_sound.play()
-			accept_sound.connect("finished", Callable(get_tree(), "quit"))
-		else:
-			invalid_command()
-	elif prompt[0] == "echo" or prompt[0] == "@echo":
-		accept_sound.play()
-		if prompt.size() ==1:
-			terminal_text.text += "\n> ''"
-		else :
-			var echoed = text_input.replace(prompt[0]+" ","")
-			terminal_text.text += "\n> '"+echoed+"'"
-	elif prompt[0] == '#WTF???' and prompt.size() == 1:
-		accept_sound.play()
-		OS.shell_open("https://www.youtube.com/@-RedIndieGames")
-		
-	elif (prompt[0] == 'rickroll' or prompt[0] == 'rick') and prompt.size()==1:
-		accept_sound.play()
-		OS.shell_open("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
-		
-	else:
-		invalid_command()
 	
 func invalid_command():
-	reject_sound.play()
-	terminal_text.text += "\n>'"+text_input+ "' is not a valid command\n> Type 'help' to see a list of commands"
+	terminal_text.text += "\n>'"+text_input+"' is not a valid command\n> Type 'help' to see a list of commands"
+	play_sound(false)
+
 
 func display_file():
 	$AnimationPlayer.play("animate_text")
 	$TextDisplay.play()
+
+
+func get_last_prompt():
+	return 
+
+
+func _on_rich_text_label_meta_clicked(meta: Variant) -> void:
+	print(str(meta))
+	OS.shell_open(str(meta))

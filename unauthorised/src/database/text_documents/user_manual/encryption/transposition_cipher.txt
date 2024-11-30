@@ -1,0 +1,26 @@
+> Transposition Cipher Encryption
+---
+Welcome, Operative. The 'Transposition Cipher' rearranges the characters of the plaintext into a new order. Unlike substitution ciphers, it keeps the original characters but changes their positions.
+
+In this system, the plaintext is divided into rows of 4 characters, and any incomplete rows are filled with 'X'. Columns are then read to form the ciphertext.
+
+Example:
+To encrypt "admin":
+
+	Divide into rows:
+
+a  d  m  i
+n  X  X  X
+
+Read columns:
+
+	an  dX  mX  iX
+
+Ciphertext: 'andXmXiX'
+
+To proceed, decrypt the first word of "vigenere_cipher.txt" using this method (without keys) to uncover the password.
+
+Stay sharp, Operative.
+
+-X
+---

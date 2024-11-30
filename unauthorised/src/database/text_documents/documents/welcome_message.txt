@@ -1,0 +1,16 @@
+> WELCOME_MESSAGE.TXT
+---
+Greetings Operative,
+
+By reaching this point, you have passed the initial test—proving yourself capable of navigating the labyrinth where others faltered. Your skill, or perhaps your audacity, has brought you here. Do not let it falter now.
+
+Consider this your first and only warning. The files you are about to access are NOT meant for the faint of heart—or the faint of mind. Proceeding further entangles you in a web of classified intelligence, shadowed alliances, and a network where loyalty is currency and any perceived betrayal will get you killed!
+
+Your task here is simple: Observe. Extract. And—Report.
+
+Note that every keystroke, every access, and every attempt to decipher information beyond your clearance level will be noted. The nature of this work places you on borrowed time, and every decision you make from this moment forward will have its consequences.
+
+Do not disappoint me, Only the worthy survive.
+
+- V
+---

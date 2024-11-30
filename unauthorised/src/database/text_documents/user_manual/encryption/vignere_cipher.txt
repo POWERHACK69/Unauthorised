@@ -1,0 +1,30 @@
+> Vigenère Cipher Encryption
+---
+Welcome, Operative. The Vigenère Cipher uses a keyword to shift each letter of the plaintext differently. Default key: KEY.
+
+Example:
+
+	Plaintext: APPLE
+	Key: KEYKE
+	Encrypted: KTLPI
+
+Explanation:
+
+	A (shifted by K=10): K
+	
+	P (shifted by E=4): T
+	
+	P (shifted by Y=24): L
+	
+	L (shifted by K=10): P
+	
+	E (shifted by E=4): I
+
+To access the next file, congratulations.txt, prove your mastery by encrypting its full filename using the Vigenère Cipher. Ensure you input the result correctly.
+
+'congratulations'.txt
+
+Good luck, Operative.
+
+-X
+---

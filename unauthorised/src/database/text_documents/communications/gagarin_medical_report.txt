@@ -1,0 +1,38 @@
+> Gagarin's Medical Report
+---
+To: [color=FF073A][REDACTED][/color]
+
+From: [color=FF073A][REDACTED][/color]
+
+Subject: Medical Report on Yuri Gagarin
+
+Date: [color=FF073A][REDACTED][/color]
+---
+Patient Information:
+
+	Name: Yuri Gagarin
+	Date of Birth: 9th March 1934
+	Sex: Male
+
+Examination Findings:
+
+	Physical Condition:
+		Height: [REDACTED] cm
+		Weight: [REDACTED] kg
+		Vital Signs: [REDACTED]
+
+Unusual Physical Changes:
+- [color=FF073A][REDACTED][/color] observed abnormal skin discoloration.
+
+- [color=FF073A][REDACTED][/color] noted unusual growth patterns in hair and nails.
+
+- [color=FF073A][REDACTED][/color] reported unexplained weight fluctuations.
+
+- [color=FF073A][REDACTED][/color] documented changes in muscle density and skeletal structure.
+
+Conclusion:
+
+The patient exhibits significant physical changes that are not consistent with normal human physiology. Further investigation is required to determine the cause of these anomalies. A memo from the KGB regarding additional findings will be received shortly.
+
+Password hint: A 3-letter consonant word.
+---

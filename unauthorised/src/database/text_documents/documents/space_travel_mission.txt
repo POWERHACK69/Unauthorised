@@ -1,0 +1,8 @@
+> Space Travel Mission
+---
+In 1961, the USSR achieved a monumental milestone with the launch of Yuri Gagarin, the first human in space. The Vektorians meticulously planned and executed this mission, ensuring its success. Gagarin orbited the Earth, proving the USSR's dominance in space technology. 
+
+However, upon his return, peculiarities emerged. Reports indicate unusual behavior and unexplained physical changes. Some speculate that the mission was not entirely successful, hinting at unforeseen complications. See gagarin_behavior.txt for more details.
+
+Password hint: (no space) Look To The Stars For Guidance
+---

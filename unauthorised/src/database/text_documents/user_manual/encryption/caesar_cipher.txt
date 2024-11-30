@@ -1,0 +1,25 @@
+> Caesar Cipher Encryption
+---
+Welcome, Operative.
+
+The 'Caesar Cipher' is a simple encryption technique that shifts each character in the plaintext by a fixed number of positions in the alphanumeric sequence. In the XCORE system, the shift is '+3'.
+
+Example:
+
+	a becomes d
+	Z becomes C
+	7 becomes 0
+
+Non-alphanumeric characters remain unchanged.
+
+Operational Notes:
+
+	The shift is always +3 unless specified otherwise.
+	Proper usage ensures secure encoding for low-risk operations.
+
+The next file, 'transposition_cipher.txt', explores a more complex method. To access it, encrypt the first word of its name, transposition, using the Caesar Cipher (+3 shift) and enter the result as the password.
+
+Good luck, Operative.
+
+-X
+---

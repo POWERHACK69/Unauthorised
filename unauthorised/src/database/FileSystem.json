@@ -1,71 +1,447 @@
 {
-	"root":
-		{
-			"Documents":
-				{
-					"Welcome": "
-> WELCOME_MESSAGE.TXT
----
-Greetings,
-
-Consider this your first and only warning. The files you are about to access are not meant for the faint of heart—or the faint of mind. Proceeding further entangles you in a web of classified intelligence, shadowed alliances, and a network where loyalty is currency and any perceived betrayal will get you killed!
-
-Your task here is simple: Observe. Extract. And—Report.
-
-Note that every keystroke, every access, and every attempt to decipher information beyond your clearance level will be noted. The nature of this work places you on borrowed time, and every decision you make from this moment forward will have its consequences.
-
-Do not disappoint me, Only the worthy survive.
-
-- V
----
-					",
-					"INTERCEPT_LOG_001.TXT": "
-> INTERCEPT_LOG_001.TXT
----
-Well, well… looks like ▙█▊▔▎░ has roped in another “loyal soul” to do his bidding. The man just can’t get enough of those ominous, hollow speeches, can he? You’d think he’d tire of the theatrics, but no—he’s a clown with a captive audience. Welcome to the puppet show, where you’re both the puppet *and* the master… if you play your cards right.
-
-A word of caution: ▙█▊▔▎░ speaks of loyalty, but here? Loyalty’s about as durable as glass. Everyone has an angle, a hidden game they play. I suggest you find yours sooner than later if you plan to survive. Make the right choice, and you might just evade certain *unfortunate consequences.*
-
-Oh, and don’t flatter yourself. If you’re seeing this, it’s because I wanted you to.
-
-P.S. Just a thought: The counter-NATO initiative? It’s doomed.
-
----
-
-					",
-					"Documents2": {
-						"Hey" : "sup"
+	"root": {
+		"user_manual": {
+			"meta_data": "Name: user_manual\nFiletype: Folder\nCreated: 19th Feb 1957\nLast Modified: 15th Mar 1959\nDescription: A collection of various help documents for the encryption system and related topics, created to assist new operatives in navigating the complexities of their tasks.",
+			"file_type": "FOLDER",
+			"password": "",
+			"content": {
+				"system_induction": {
+					"meta_data": "Name: system_induction.txt\nFiletype: Text\nCreated: 19th Feb 1957\nLast Modified: 19th Feb 1957\nDescription: A brief introduction to the core system and its purpose, designed for new members.",
+					"file_type": "TEXT",
+					"password": "",
+					"content": "res://src/database/text_documents/user_manual/intro_to_xcore.txt"
+				},
+				"commands": {
+					"meta_data": "Name: commands.txt\nFiletype: Text\nCreated: 19th Feb 1957\nLast Modified: 19th Feb 1957\nDescription: List of available system commands and their functions to enhance operational efficiency.",
+					"file_type": "TEXT",
+					"password": "",
+					"content": "res://src/database/text_documents/user_manual/commands.txt"
+				},
+				"meta": {
+					"meta_data": "Name: meta.txt\nFiletype: Text\nCreated: 5th Jan 1958\nLast Modified: 5th Jan 1958\nDescription: Metadata information for system organization and file details, aiding in navigation and access.",
+					"file_type": "TEXT",
+					"password": "",
+					"content": "res://src/database/text_documents/user_manual/meta.txt"
+				},
+				"note": {
+					"meta_data": "Name: note.txt\nFiletype: Text\nCreated: 15th Dec 1958\nLast Modified: 15th Dec 1958\nDescription: Documentation on the note command, detailing its usage for temporary memory storage.",
+					"file_type": "TEXT",
+					"password": "",
+					"content": "res://src/database/text_documents/user_manual/note.txt"
+				},
+				"access": {
+					"meta_data": "Name: access.txt\nFiletype: Text\nCreated: 20th Jan 1958\nLast Modified: 20th Jan 1959\nDescription: Documentation on the access command for retrieving sensitive information.",
+					"file_type": "TEXT",
+					"password": "",
+					"content": "res://src/database/text_documents/user_manual/access.txt"
+				},
+				"encryptions": {
+					"meta_data": "Name: encryptions\nFiletype: Folder\nCreated: 20th Jan 1959\nLast Modified: 15th Mar 1959\nDescription: Folder containing various encryption-related documentation and methods for secure communications.",
+					"file_type": "FOLDER",
+					"password": "",
+					"content": {
+						"encryption": {
+							"meta_data": "Name: encryption.txt\nFiletype: Text\nCreated: 20th Jan 1959\nLast Modified: 20th Jan 1959\nDescription: General encryption principles and introductory welcome message for new users.",
+							"file_type": "TEXT",
+							"password": "",
+							"content": "res://src/database/text_documents/user_manual/encryption/encryptions.txt"
+						},
+						"caesar_cipher": {
+							"meta_data": "Name: caesar_cipher.txt\nFiletype: Text\nCreated: 20th Jan 1959\nLast Modified: 15th Mar 1959\nDescription: Explanation of the Caesar Cipher encryption method and its application in communications.",
+							"file_type": "TEXT",
+							"password": "",
+							"content": "res://src/database/text_documents/user_manual/encryption/caesar_cipher.txt"
+						},
+						"transposition_cipher": {
+							"meta_data": "Name: transpositional_cipher.txt\nFiletype: Text\nCreated: 20th Jan 1959\nLast Modified: 15th Mar 1959\nDescription: Overview of the transposition cipher method, including encryption and decryption steps.",
+							"file_type": "TEXT",
+							"password": "wuxfrxuhvfr",
+							"content": "res://src/database/text_documents/user_manual/encryption/transposition_cipher.txt"
+						},
+						"vigenere_cipher": {
+							"meta_data": "Name: vigenere_cipher.txt\nFiletype: Text\nCreated: 20th Jan 1959\nLast Modified: 15th Mar 1959\nDescription: Documentation on the Vigenère cipher method, a more complex encryption technique for advanced users.",
+							"file_type": "TEXT",
+							"password": "nerevige",
+							"content": "res://src/database/text_documents/user_manual/encryption/vignere_cipher.txt"
+						},
+						"congratulations": {
+							"meta_data": "Name: congratulations.txt\nFiletype: Text\nCreated: 18th Jan 1959\nLast Modified: 15th Mar 1959\nDescription: A congratulatory message to the user for mastering initial commands.",
+							"file_type": "TEXT",
+							"password": "mslqvydyjkxgyrq.txt",
+							"content": "res://src/database/text_documents/user_manual/encryption/congratulations.txt"
+						}
+					}
+				}
+			}
+		},
+		"documents": {
+			"meta_data": "Name: documents\nFiletype: Folder\nCreated: 20th Jan 1959\nLast Modified: 10th Mar 1963\nDescription: Contains various documents related to operations and intelligence reports.",
+			"file_type": "FOLDER",
+			"password": "",
+			"content": {
+				"welcome_message": {
+					"meta_data": "Name: welcome_message.txt\nFiletype: Text\nCreated: 20th Jan 1959\nLast Modified: 20th Jan 1959\nDescription: Initial user warning guiding operatives on their mission.",
+					"file_type": "TEXT",
+					"password": "",
+					"content": "res://src/database/text_documents/documents/welcome_message.txt"
+				},
+				"intercept_msg_001": {
+					"meta_data": "Name: intercept_msg_001\nFiletype: Text\nCreated: 20th Jan 1959\nLast Modified: 20th Jan 1959\nDescription: Initial communication warning regarding operational security.",
+					"file_type": "TEXT",
+					"password": "",
+					"content": "res://src/database/text_documents/documents/intercept_msg_001.txt"
+				},
+				"space_travel_mission": {
+					"meta_data": "Name: space_travel_mission.txt\nFiletype: Text\nCreated: 20th Jan 1959\nLast Modified: 20th Jan 1959\nDescription: Documentation regarding the successful execution of Gagarin's mission and its implications.",
+					"file_type": "TEXT",
+					"password": "",
+					"content": "res://src/database/text_documents/documents/space_travel_mission.txt"
+				},
+				"moon_landing_intel": {
+					"meta_data": "Name: moon_landing_intel.txt\nFiletype: Text\nCreated: 20th Jan 1963\nLast Modified: 10th Mar 1963\nDescription: Intel on Blackstone’s plan to fake the Apollo 11 moon landing for geopolitical control.",
+					"file_type": "TEXT",
+					"password": "",
+					"content": "res://src/database/text_documents/documents/moon_landing_intel.txt"
+				},
+				"gagarin_behavior": {
+					"meta_data": "Name: gagarin_behavior_analysis.txt\nFiletype: Text\nCreated: 20th Jan 1959\nLast Modified: 10th Mar 1963\nDescription: Analysis of behavioral changes in Yuri Gagarin post-space travel.",
+					"file_type": "TEXT",
+					"password": "LTTSFG",
+					"content": "res://src/database/text_documents/documents/gagarin_behavior_analysis.txt"
+				},
+				"agent_plan": {
+					"meta_data": "Name: agent_plan.txt\nFiletype: Text\nCreated: 20th Jan 1959\nLast Modified: 10th Mar 1963\nDescription: Strategic plans regarding agent operations and their implications.",
+					"file_type": "TEXT",
+					"password": "actions",
+					"content": "res://src/database/text_documents/documents/agent_plan.txt"
+				}
+			}
+		},
+		"projects": {
+			"meta_data": "Name: projects\nFiletype: Folder\nCreated: 1st Jan 1963\nLast Modified: 2nd Jan 1964\nDescription: Various projects and operational plans developed for long-term objectives.",
+			"file_type": "FOLDER",
+			"password": "",
+			"content": {
+				"op_cosmo": {
+					"meta_data": "Name: op_cosmo.txt\nFiletype: Text\nCreated: 7th Jan 1963\nLast Modified: 8th Jan 1963\nDescription: Plans for the elimination of Yuri Gagarin due to perceived failures.",
+					"file_type": "TEXT",
+					"password": "",
+					"content": "res://src/database/text_documents/projects/op_cosmo.txt"
+				},
+				"op_phoenix": {
+					"meta_data": "Name: op_phoenix\nFiletype: Folder\nCreated: 3rd Jan 1964\nLast Modified: 4th Jan 1964\nDescription: Phoenix-related documents, detailing innovative operational strategies for the coming years.",
+					"file_type": "FOLDER",
+					"password": "5egtgfdg5",
+					"content": {}
+				},
+				"proj_blackdoor": {
+					"meta_data": "Name: proj_blackdoor\nFiletype: Folder\nCreated: 5th Jan 1964\nLast Modified: 6th Jan 1964\nDescription: Top secret plans to develop super soldiers through advanced experimentation.",
+					"file_type": "FOLDER",
+					"password": "",
+					"content": {
+						"means.txt": {
+							"meta_data": "Name: means.txt\nFiletype: Text\nCreated: 7th Jan 1964\nLast Modified: 8th Jan 1964\nDescription: Overview of methods used in the Black Door Project for soldier enhancement.",
+							"file_type": "TEXT",
+							"password": "fsdgretr",
+							"content": ""
+						},
+						"objectives.txt": {
+							"meta_data": "Name: objectives.txt\nFiletype: Text\nCreated: 7th Jan 1964\nLast Modified: 8th Jan 1964\nDescription: Detailed objectives of the Black Door Project to utilize enhanced soldiers.",
+							"file_type": "TEXT",
+							"password": "fsdgretr",
+							"content": ""
+						}
 					}
 				},
-			
-			"Projects":
-				{
-					"Welcome2": "hey LION"
-				},
-			
-			"Communications":
-				{
-					
-				},
-				
-			"encrypted":
-				{
-					
-				},
-				
-			"misc":
-				{
-					
-				},
-				
-		},
-	"Q":
-		{
-			"Home":
-				{
-					"Log_in": "",
-					"Notes":"",
-					"Anonymous mail": {}
+				"new_dawn_plan.txt": {
+					"meta_data": "Name: new_dawn_plan.txt\nFiletype: Text\nCreated: 7th Jan 1964\nLast Modified: 8th Jan 1964\nDescription: Long-term global plans for the future, detailing strategies for world influence.",
+					"file_type": "TEXT",
+					"password": "fsdgretr",
+					"content": "Details about New Dawn."
 				}
+			}
+		},
+		"communications": {
+			"meta_data": "Name: communications\nFiletype: Folder\nCreated: 10th Feb 1964\nLast Modified: 15th Feb 1964\nDescription: Various communication logs documenting interactions within the Order.",
+			"file_type": "FOLDER",
+			"password": "",
+			"content": {
+				"email_received": {
+					"meta_data": "Name: email_drafts\nFiletype: Folder\nCreated: 11th Feb 1964\nLast Modified: 12th Feb 1964\nDescription: Drafts of emails exchanged among operatives.",
+					"file_type": "FOLDER",
+					"password": "ceoefXfX",
+					"content": {
+						"kgb_memo_tentacle": {
+							"meta_data": "Name: kgb_memo_tentacle.mail\nFiletype: Text\nCreated: 19th Feb 1963\nLast Modified: 23rd Mar 1964\nDescription:  KGB report Yuri",
+							"file_type": "TEXT",
+							"password": "KGB",
+							"content": "res://src/database/text_documents/communications/email_received/kgb_memo_tentacle.txt"
+						},
+						"hnhqd_reply_015": {
+							"meta_data": "Name: hnhqd_reply_015.mail\nFiletype: Text\nCreated: 19th Feb 1963\nLast Modified: 23rd Mar 1964\nDescription: [REDACTED]",
+							"file_type": "TEXT",
+							"password": "",
+							"content": "res://src/database/text_documents/communications/email_received/hnhqd_reply_015.txt"
+						},
+						"hnhqd_reply_016": {
+							"meta_data": "Name: hnhqd_reply_016.mail\nFiletype: Text\nCreated: 19th Feb 1963\nLast Modified: 23rd Mar 1964\nDescription: [REDACTED]",
+							"file_type": "TEXT",
+							"password": "",
+							"content": "res://src/database/text_documents/communications/email_received/hnhqd_reply_016.txt"
+						}
+					}
+				},
+				"email_sent": {
+					"meta_data": "Name: email_sent\nFiletype: Folder\nCreated: 11th Feb 1964\nLast Modified: 12th Feb 1964\nDescription: Logs of sent emails among operatives.",
+					"file_type": "FOLDER",
+					"password": "wXiXlXlX",
+					"content": {
+						"sent_015": {
+							"meta_data": "Name: sent_015.mail\nFiletype: Text\nCreated: 19th Feb 1963\nLast Modified: 19th Feb 1963\nDescription: [EMPTY]",
+							"file_type": "TEXT",
+							"password": "",
+							"content": "res://src/database/text_documents/communications/email_sent/sent_015.txt"
+						},
+						"sent_016": {
+							"meta_data": "Name: sent_016.mail\nFiletype: Text\nCreated: 19th Feb 1963\nLast Modified: 19th Feb 1963\nDescription: [EMPTY]",
+							"file_type": "TEXT",
+							"password": "",
+							"content": "res://src/database/text_documents/communications/email_sent/sent_016.txt"
+						},
+						"sent_017": {
+							"meta_data": "Name: sent_017.mail\nFiletype: Text\nCreated: 20th Feb 1963\nLast Modified: 20th Feb 1963\nDescription: [EMPTY]",
+							"file_type": "TEXT",
+							"password": "",
+							"content": "res://src/database/text_documents/communications/email_sent/sent_017.txt"
+						},
+						"sent_018": {
+							"meta_data": "Name: sent_018.mail\nFiletype: Text\nCreated: 21st Feb 1963\nLast Modified: 21st Feb 1963\nDescription: [EMPTY]",
+							"file_type": "TEXT",
+							"password": "",
+							"content": "res://src/database/text_documents/communications/email_sent/sent_018.txt"
+						},
+						"sent_019": {
+							"meta_data": "Name: sent_019.mail\nFiletype: Text\nCreated: 23rd Feb 1963\nLast Modified: 23rd Feb 1963\nDescription: [EMPTY]",
+							"file_type": "TEXT",
+							"password": "",
+							"content": "res://src/database/text_documents/communications/email_sent/sent_018.txt"
+						}
+					}
+				},
+				"email_drafts": {
+					"meta_data": "Name: email_drafts\nFiletype: Folder\nCreated: 11th Feb 1960\nLast Modified: 12th Feb 1964\nDescription: Drafts of emails waiting for finalization.",
+					"file_type": "FOLDER",
+					"password": "sltXeXeX",
+					"content": {}
+				},
+				"encrypted_communications": {
+					"meta_data": "Name: encrypted\nFiletype: Folder\nCreated: 13th Feb 1960\nLast Modified: 14th Feb 1964\nDescription: 'Encrypted' communications requiring special access.",
+					"file_type": "FOLDER",
+					"password": "Encrypted",
+					"content": {}
+				},
+				"chat_logs": {
+					"meta_data": "Name: chat_logs\nFiletype: Folder\nCreated: 14th Feb 1961\nLast Modified: 15th Feb 1964\nDescription: Logs of chat conversations for operational analysis.",
+					"file_type": "FOLDER",
+					"password": "",
+					"content": {
+						"chat_log005": {
+							"meta_data": "Name: chat_log005.rtfz\nFiletype: Text\nCreated: 20th Feb 1959\nLast Modified: 20th Feb 1963\nDescription: Chat with a stranger about sensitive topics.",
+							"file_type": "TEXT",
+							"password": "Xylopti876",
+							"content": "res://src/database/text_documents/communications/chat_logs/chatlog_005.txt"
+						},
+						"hnhqd_dqg_ylmwru": {
+							"meta_data": "Name: hnhqd_dqg_ylmwru.rtfz\nFiletype: Text\nCreated: 20th Feb 1963\nLast Modified: 20th Feb 1963\nDescription: An private chat between some individuals.",
+							"file_type": "TEXT",
+							"password": "vignere",
+							"content": "res://src/database/text_documents/communications/chat_logs/hnhqd_dqg_ylmwru.txt"
+						}
+					}
+				},
+				"gagarin_medical_report": {
+					"meta_data": "Name: gagarin_medical_report.mail\nFiletype: Text\nCreated: 1st Feb 1963\nLast Modified: 2nd Feb 1963\nDescription: Medical report detailing observations on Yuri Gagarin’s health following space travel.",
+					"file_type": "TEXT",
+					"password": "medical",
+					"content": "res://src/database/text_documents/communications/gagarin_medical_report.txt"
+				},
+				"whom_it_may_concern": {
+					"meta_data": "Name: whom_it_may_concern.txt\nFiletype: Text\nCreated: 1st Feb 1963\nLast Modified: 2nd Feb 1963\nDescription: A reflective letter documenting personal thoughts and reminders.",
+					"file_type": "TEXT",
+					"password": "",
+					"content": "res://src/database/text_documents/communications/whom_it_may_concern.txt"
+				}
+			}
+		},
+		"encrypted_files": {
+			"meta_data": "Name: encrypted_files\nFiletype: Folder\nCreated: 20th Feb 1963\nLast Modified: 25th Feb 1965\nDescription: Files here don't need to be password protected (You'll soon see why). Folder Password is 'encrypted'",
+			"file_type": "FOLDER",
+			"password": "encrypted",
+			"content": {
+				"MoonShine": {
+					"meta_data": "Name: MoonShine\nFiletype: Folder\nCreated: 20th Feb 1963\nLast Modified: 25th Feb 1967\nDescription: Intercepted communications regarding Blackstone's project MoonShine, a plot to fake the USA moon landing. Folder Password is 'moonshine'",
+					"file_type": "FOLDER",
+					"password": "moonshine",
+					"content": {
+						"intercept_key.enc": {
+							"meta_data": "Name: intercept_possible_key.enc\nFilefile: Encrypted\nCreated: 21st Feb 1965\nLast Modified: 22nd Feb 1965\nDescription: Our crypto-breakers are working hard to find the key. What in our language could have 26 characters?",
+							"file_type": "ENCRYPTED",
+							"password": "",
+							"content": "res://src/database/text_documents/encrypted_files/Moonshine/intercept_key.txt"
+						},
+						"intercept_moonshine.enc": {
+							"meta_data": "Name: intercept_moonshine.enc\nFilefile: Encrypted\nCreated: 21st Feb 1965\nLast Modified: 22nd Feb 1965\nDescription: The objective of Moonshine, detailing the intended deception behind the moon landing.",
+							"file_type": "ENCRYPTED",
+							"password": "",
+							"content": "res://src/database/text_documents/encrypted_files/Moonshine/intercept_moonshine01.txt"
+						},
+						"intercept_moonshine2.enc": {
+							"meta_data": "Name: intercept_moonshine2.enc\nFilefile: Encrypted\nCreated: 23rd Feb 1965\nLast Modified: 24th Feb 1965\nDescription: Moonshine's pre-launch deception plans.",
+							"file_type": "ENCRYPTED",
+							"password": "",
+							"content": "res://src/database/text_documents/encrypted_files/Moonshine/intercept_moonshine02.txt"
+						},
+						"intercept_moonshine3.enc": {
+							"meta_data": "Name: intercept_moonshine3.enc\nFilefile: Encrypted\nCreated: 24th Feb 1965\nLast Modified: 25th Feb 1965\nDescription: Moonshine's Lunar Hoax Execution plans.",
+							"file_type": "ENCRYPTED",
+							"password": "",
+							"content": "res://src/database/text_documents/encrypted_files/Moonshine/intercept_moonshine03.txt"
+						},
+						"intercept_moonshine4.enc": {
+							"meta_data": "Name: intercept_moonshine4.enc\nFilefile: Encrypted\nCreated: 21st Feb 1965\nLast Modified: 22nd Feb 1965\nDescription: Moonshine's Post-Landing Media Control strategy.",
+							"file_type": "ENCRYPTED",
+							"password": "",
+							"content": "res://src/database/text_documents/encrypted_files/Moonshine/intercept_moonshine04.txt"
+						},
+						"intercept_moonshine5.enc": {
+							"meta_data": "Name: intercept_moonshine5.enc\nFilefile: Encrypted\nCreated: 23rd Feb 1965\nLast Modified: 24th Feb 1965\nDescription: Moonshine's Cover-Up & Evidence Destruction measures.",
+							"file_type": "ENCRYPTED",
+							"password": "",
+							"content": "res://src/database/text_documents/encrypted_files/Moonshine/intercept_moonshine05.txt"
+						},
+						"intercept_moonshine6.enc": {
+							"meta_data": "Name: intercept_moonshine6.enc\nFilefile: Encrypted\nCreated: 24th Feb 1965\nLast Modified: 25th Feb 1965\nDescription: Moonshine's Strategic Exploitation plan.",
+							"file_type": "ENCRYPTED",
+							"password": "",
+							"content": "res://src/database/text_documents/encrypted_files/Moonshine/intercept_moonshine06.txt"
+						}
+					}
+				},
+				"phoenix_final_plan.enc": {
+					"meta_data": "Name: phoenix_final_plan.enc\nFilefile: Encrypted\nCreated: 21st Feb 1965\nLast Modified: 22nd Feb 1965\nDescription: Final Phoenix files outlining future operations. Coming soon.",
+					"file_type": "ENCRYPTED",
+					"password": "somepassword",
+					"content": "Encrypted content of Phoenix Final Plan. There's no way you accessed this file without looking at the source code"
+				},
+				"cia_dragonfire.enc": {
+					"meta_data": "Name: cia_dragonfire.enc\nFilefile: Encrypted\nCreated: 23rd Feb 1965\nLast Modified: 24th Feb 1965\nDescription: CIA support for Dragonfire operations. Coming soon.",
+					"file_type": "ENCRYPTED",
+					"password": "anotherpassword",
+					"content": "Encrypted content of CIA Dragonfire file."
+				},
+				"viet_ops_strategy.enc": {
+					"meta_data": "Name: viet_ops_strategy.enc\nFilefile: Encrypted\nCreated: 24th Feb 1965\nLast Modified: 25th Feb 1965\nDescription: Vietnam ops strategy details. Coming soon.",
+					"file_type": "ENCRYPTED",
+					"password": "yetanotherpassword",
+					"content": "Encrypted content of Vietnam Ops Strategy."
+				}
+			}
+		},
+		"miscellaneous": {
+			"meta_data": "Name: miscellaneous\nFilefile: Folder\nCreated: 30th Mar 1966\nLast Modified: 31st Mar 1966\nDescription: Miscellaneous files containing various notes and observations.",
+			"file_type": "FOLDER",
+			"password": "",
+			"content": {
+				"personal": {
+					"meta_data": "Name: personal\nFilefile: Folder\nCreated: 30th Mar 1966\nLast Modified: 31st Mar 1966\nDescription: Personal files and reflections of operatives.",
+					"file_type": "FOLDER",
+					"password": "",
+					"content": {}
+				},
+				"random_logs": {
+					"meta_data": "Name: random_logs\nFilefile: Folder\nCreated: 30th Mar 1966\nLast Modified: 31st Mar 1966\nDescription: Logs of various activities and occurrences within the network.",
+					"file_type": "FOLDER",
+					"password": "",
+					"content": {}
+				},
+				"archive": {
+					"meta_data": "Name: archive\nFilefile: Folder\nCreated: 30th Mar 1966\nLast Modified: 31st Mar 1966\nDescription: Archived files for long-term storage and reference.",
+					"file_type": "FOLDER",
+					"password": "",
+					"content": {
+						"hypothesis_on_gagarin": {
+							"meta_data": "Name: hypothesis_on_gagarin.txt\nFilefile: Text\nCreated: 24th Feb 1965\nLast Modified: 25th Feb 1965\nDescription: Hypothesis on Gagarin's strange behaviors post-space travel. The password is 'gagarin' +5.",
+							"file_type": "TEXT",
+							"password": "mfmfwnt",
+							"content": "res://src/database/text_documents/miscellaneous/archive/alien_hypothesis.txt"
+						}
+					}
+				},
+				"photos": {
+					"meta_data": "Name: photos\nFilefile: Folder\nCreated: 30th Mar 1966\nLast Modified: 31st Mar 1966\nDescription: Archived photos related to operations and missions.",
+					"file_type": "FOLDER",
+					"password": "",
+					"content": {
+						"VoirkXtX.ascii": {
+							"meta_data": "Name: VoirkXtX.ascii\nFilefile: Text\nCreated: 1st Apr 1965\nLast Modified: 2nd Apr 1965\nDescription: [REDACTED] ASCII art related to operations.",
+							"file_type": "ASCII",
+							"password": "",
+							"content": "res://assets/photos/ascii-art(10).png"
+						},
+						"EalXeXnX.ascii": {
+							"meta_data": "Name: EalXeXnX.ascii\nFilefile: Text\nCreated: 1st Apr 1965\nLast Modified: 2nd Apr 1965\nDescription: [REDACTED] ASCII art related to operations.",
+							"file_type": "ASCII",
+							"password": "",
+							"content": "res://assets/photos/ascii-art(9).png"
+						},
+						"RXeXeXdX.ascii": {
+							"meta_data": "Name: RXeXeXdX.ascii\nFilefile: Text\nCreated: 1st Apr 1965\nLast Modified: 2nd Apr 1965\nDescription: [REDACTED] ASCII art related to operations.",
+							"file_type": "ASCII",
+							"password": "",
+							"content": "res://assets/photos/ascii-art(14).png"
+						},
+						"MaimrXiX.ascii": {
+							"meta_data": "Name: MaimrXiX.ascii\nFilefile: Text\nCreated: 1st Apr 1965\nLast Modified: 2nd Apr 1965\nDescription: [REDACTED] ASCII art related to operations.",
+							"file_type": "ASCII",
+							"password": "",
+							"content": "res://assets/photos/ascii-art(11).png"
+						},
+						"AXdXaXXX.ascii": {
+							"meta_data": "Name: AXdXaXXX.ascii\nFilefile: Text\nCreated: 1st Apr 1965\nLast Modified: 2nd Apr 1965\nDescription: [REDACTED] ASCII art related to operations.",
+							"file_type": "ASCII",
+							"password": "",
+							"content": "res://assets/photos/ascii-art(12).png"
+						}
+					}
+				}
+			}
 		}
+	},
+	"root/.scrt": {
+		"files": {
+			"meta_data": "Name: files\nFilefile: Folder\nCreated: 5th Apr 1967\nLast Modified: 6th Apr 1967\nDescription: Secret, restricted access files reserved for high-level operatives.",
+			"file_type": "FOLDER",
+			"password": "",
+			"content": {
+				"intruder": {
+					"meta_data": "Name: intruder.scr\nFilefile: scr\nCreated: 1st Apr 1958\nLast Modified: 2nd Apr 1958\nDescription: Warning about potential infiltrators within the network.",
+					"file_type": "scr",
+					"password": "",
+					"content": "res://src/database/text_documents/secret/INTRUSION DISCOVERY.txt"
+				},
+				"credits": {
+					"meta_data": "Name: credits.scr\nFilefile: scr\nCreated: 30th Nov 1966\nLast Modified: 2nd Apr 1966\nDescription: Acknowledgments for contributions to the project.",
+					"file_type": "scr",
+					"password": "",
+					"content": "res://src/database/text_documents/secret/credits.txt"
+				},
+				"the_order": {
+					"meta_data": "Name: the_order.scr\nFilefile: scr\nCreated: 30th Mar 1966\nLast Modified: 31st Mar 1966\nDescription: A file containing classified information about the secret society's operations.",
+					"file_type": "scr",
+					"password": "",
+					"content": "res://src/database/text_documents/secret/the_order.txt"
+				}
+			}
+		}
+	}
 }
