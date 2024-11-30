@@ -14,15 +14,14 @@ var text_input
 
 
 
-# Called when the node enters the scene tree for the first time.
 
 func _ready() -> void:
 	terminal_text.get_v_scroll_bar().self_modulate = Color("white", 0.0)
-	line_edit.grab_focus()  # focus at start, no need for deferred call every frame
+	line_edit.grab_focus() 
 
 func _process(_delta: float) -> void:
 	terminal_text.scroll_vertical = terminal_text.get_line_count()
-	line_edit.grab_focus()  # focus at start, no need for deferred call every frame
+	line_edit.grab_focus()
 	if Input.is_action_just_pressed("Enter") and line_edit.text != "":
 		text_input = line_edit.text
 		prompt = text_input.split(" ")
