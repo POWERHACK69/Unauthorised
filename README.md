@@ -10,11 +10,10 @@ Created by Red Indie Games (and POWERHACK), *Unauthorized* is a love letter to r
 
 ## Why GPLv3 Licensing?
 
-"Unauthorized" is a project by a small indie creator, Red Indie Games (and POWERHACK) for the GitHub GameOff 2024 Jam. By licensing this game under the GPLv3, I aim to:
+"Unauthorized" is a project by Red Indie Games (and POWERHACK) for the GitHub GameOff 2024 Jam. By licensing this game under the GPLv3, I aim to:
 
 - **Protect my work while sharing it openly with the community.**
 - **Encourage others to learn, contribute, and improve upon it.**
-- **Increase my visibility in the Godot game dev scene.**
 
 The GPLv3 license gives you the freedom to use, modify, and distribute the game (non-commercially/commercially) while ensuring that future versions remain open and free. This license protects the community and ensures that the project stays true to its open-source ethos.
 
