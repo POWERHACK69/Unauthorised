@@ -15,7 +15,7 @@ Created by Red Indie Games (and POWERHACK), *Unauthorized* is a love letter to r
 - **Protect my work while sharing it openly with the community.**
 - **Encourage others to learn, contribute, and improve upon it.**
 
-The GPLv3 license gives you the freedom to use, modify, and distribute the game (non-commercially/commercially) while ensuring that future versions remain open and free. This license protects the community and ensures that the project stays true to its open-source ethos.
+The GPLv3 license gives you the freedom to use, modify, and distribute the game while ensuring that future versions remain open and free. This license protects the community and ensures that the project stays true to its open-source ethos.
 
 ## A Small Request 
 
