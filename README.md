@@ -4,7 +4,7 @@
 
 ![Screenshot 2024-11-30 161143](https://github.com/user-attachments/assets/bf665a72-2675-4e80-a074-9cfc117e3fce)
 
-**Unauthorized** is a terminal-based game where players dive into a mysterious digital world, uncovering hidden files, cracking passwords, and piecing together an intriguing narrative. Set against a neon green terminal interface, the game challenges players to decipher encrypted data and unravel a conspiracy.
+**Unauthorized** is a terminal-simulator game that involves uncovering hidden files, cracking passwords, and piecing together an intriguing narrative. The game challenges players to decipher encrypted data and unravel a conspiracy.
 
 Created by Red Indie Games (and POWERHACK), *Unauthorized* is a love letter to retro computing, cryptography and encryption puzzles. 
 
