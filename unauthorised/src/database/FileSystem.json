@@ -55,13 +55,13 @@
 						"transposition_cipher": {
 							"meta_data": "Name: transpositional_cipher.txt\nFiletype: Text\nCreated: 20th Jan 1959\nLast Modified: 15th Mar 1959\nDescription: Overview of the transposition cipher method, including encryption and decryption steps.",
 							"file_type": "TEXT",
-							"password": "wuxfrxuhvfr",
+							"password": "wudqvsrvlwlrq",
 							"content": "res://src/database/text_documents/user_manual/encryption/transposition_cipher.txt"
 						},
 						"vigenere_cipher": {
 							"meta_data": "Name: vigenere_cipher.txt\nFiletype: Text\nCreated: 20th Jan 1959\nLast Modified: 15th Mar 1959\nDescription: Documentation on the Vigenère cipher method, a more complex encryption technique for advanced users.",
 							"file_type": "TEXT",
-							"password": "nerevige",
+							"password": "vniegree",
 							"content": "res://src/database/text_documents/user_manual/encryption/vignere_cipher.txt"
 						},
 						"congratulations": {

@@ -2,12 +2,12 @@
 ---
 Welcome, Operative. The 'Transposition Cipher' rearranges the characters of the plaintext into a new order. Unlike substitution ciphers, it keeps the original characters but changes their positions.
 
-In this system, the plaintext is divided into rows of 4 characters, and any incomplete rows are filled with 'X'. Columns are then read to form the ciphertext.
+In this system, the plaintext is divided into columns of 4 characters, and any incomplete rows are filled with 'X'. Columns are then read to form the ciphertext.
 
 Example:
 To encrypt "admin":
 
-	Divide into rows:
+	Divide into columns:
 
 a  d  m  i
 n  X  X  X

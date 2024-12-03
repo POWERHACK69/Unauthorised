@@ -37,8 +37,6 @@ func load_data():
 
 func help():
 	get_parent().accept_sound.play()
-	#get_parent().display_text.text = "[img]res://assets/photos/image(57).png[/img]"
-	get_parent().display_file()
 	get_parent().terminal_text.text += "\n>|---BASIC COMMANDS---|"
 	get_parent().terminal_text.text += "\n Command    | Usage"
 	get_parent().terminal_text.text += "\n------------|-----------------------|"
